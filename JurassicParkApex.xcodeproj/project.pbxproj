@@ -11,6 +11,11 @@
 		073117E929FA5EC40078FD1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073117E829FA5EC40078FD1D /* ContentView.swift */; };
 		073117EB29FA5EC50078FD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073117EA29FA5EC50078FD1D /* Assets.xcassets */; };
 		073117EE29FA5EC50078FD1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 073117ED29FA5EC50078FD1D /* Preview Assets.xcassets */; };
+		073117F529FA61050078FD1D /* jpapexpredators.json in Resources */ = {isa = PBXBuildFile; fileRef = 073117F429FA61050078FD1D /* jpapexpredators.json */; };
+		073117F729FA637E0078FD1D /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073117F629FA637E0078FD1D /* ApexPredator.swift */; };
+		073117F929FA70E40078FD1D /* ApexPredatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073117F829FA70E40078FD1D /* ApexPredatorController.swift */; };
+		073117FB29FA77740078FD1D /* PredatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073117FA29FA77740078FD1D /* PredatorRow.swift */; };
+		073117FD29FBAF4C0078FD1D /* PredatorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073117FC29FBAF4C0078FD1D /* PredatorDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		073117E829FA5EC40078FD1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		073117EA29FA5EC50078FD1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		073117ED29FA5EC50078FD1D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		073117F429FA61050078FD1D /* jpapexpredators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jpapexpredators.json; sourceTree = "<group>"; };
+		073117F629FA637E0078FD1D /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
+		073117F829FA70E40078FD1D /* ApexPredatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredatorController.swift; sourceTree = "<group>"; };
+		073117FA29FA77740078FD1D /* PredatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorRow.swift; sourceTree = "<group>"; };
+		073117FC29FBAF4C0078FD1D /* PredatorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				073117E629FA5EC40078FD1D /* JurassicParkApexApp.swift */,
+				073117F629FA637E0078FD1D /* ApexPredator.swift */,
+				073117F829FA70E40078FD1D /* ApexPredatorController.swift */,
 				073117E829FA5EC40078FD1D /* ContentView.swift */,
+				073117FC29FBAF4C0078FD1D /* PredatorDetail.swift */,
+				073117FA29FA77740078FD1D /* PredatorRow.swift */,
+				073117F429FA61050078FD1D /* jpapexpredators.json */,
 				073117EA29FA5EC50078FD1D /* Assets.xcassets */,
 				073117EC29FA5EC50078FD1D /* Preview Content */,
 			);
@@ -127,6 +142,7 @@
 			files = (
 				073117EE29FA5EC50078FD1D /* Preview Assets.xcassets in Resources */,
 				073117EB29FA5EC50078FD1D /* Assets.xcassets in Resources */,
+				073117F529FA61050078FD1D /* jpapexpredators.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073117F729FA637E0078FD1D /* ApexPredator.swift in Sources */,
 				073117E929FA5EC40078FD1D /* ContentView.swift in Sources */,
+				073117F929FA70E40078FD1D /* ApexPredatorController.swift in Sources */,
+				073117FD29FBAF4C0078FD1D /* PredatorDetail.swift in Sources */,
 				073117E729FA5EC40078FD1D /* JurassicParkApexApp.swift in Sources */,
+				073117FB29FA77740078FD1D /* PredatorRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
