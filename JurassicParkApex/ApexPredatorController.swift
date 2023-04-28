@@ -8,7 +8,9 @@
 import Foundation
 
 class ApexPredatorController {
+    var allApexPredators: [ApexPredator] = []
     var apexPredators: [ApexPredator] = []
+    let typeFilters = ["All", "Land", "Air", "Sea"]
     
     init() {
         decodeApexPredatorData()
@@ -20,10 +22,32 @@ class ApexPredatorController {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                apexPredators = try decoder.decode([ApexPredator].self, from: data)
+                allApexPredators = try decoder.decode([ApexPredator].self, from: data)
+                apexPredators = allApexPredators
             } catch {
                 print("Error decoding json data \(error)")
             }
+        }
+    }
+    
+    func typeIcon(for type: String) -> String {
+        switch type {
+        case "All": return "square.stack.3d.up.fill"
+        case "Land": return "leaf.fill"
+        case "Air": return "wind"
+        case "Sea": return "drop.fill"
+        default: return "questionmark"
+        }
+    }
+    
+    func filterBy(type: String) {
+        switch type {
+        case "Land", "Air", "Sea":
+            apexPredators = allApexPredators.filter {
+                $0.type == type.lowercased()
+            }
+        default:
+            apexPredators = allApexPredators
         }
     }
     

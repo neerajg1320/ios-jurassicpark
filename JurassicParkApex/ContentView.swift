@@ -10,8 +10,11 @@ import SwiftUI
 struct ContentView: View {
     let apController = ApexPredatorController()
     @State var sortAlphabetical = false
+    @State var currentFilter = "All"
     
     var body: some View {
+        apController.filterBy(type: currentFilter)
+        
         if sortAlphabetical {
             apController.sortByAlphabetical()
         } else {
@@ -37,6 +40,22 @@ struct ContentView: View {
                         } else {
                             Image(systemName: "textformat")
                         }
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        Picker("Filter", selection: $currentFilter) {
+                            ForEach(apController.typeFilters, id: \.self) { type in
+                                HStack {
+                                    Text(type)
+                                    Spacer()
+                                    Image(systemName: apController.typeIcon(for: type))
+                                }
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
                     }
                 }
             }
